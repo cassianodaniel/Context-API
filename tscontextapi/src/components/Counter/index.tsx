@@ -1,8 +1,8 @@
 import React from "react";
 
-import { useCount } from "./../../context/Context";
+import { useCount } from "../../context/CountContext";
 
-export default function Counter() {
+const Counter: React.FC = () => {
   const { count, setCount } = useCount();
   return (
     <div>
@@ -10,9 +10,10 @@ export default function Counter() {
         <b>Count: </b>
         {count}
       </span>
-
       <br />
       <button onClick={() => setCount(count + 1)}>+1</button>
     </div>
   );
-}
+};
+
+export default Counter;

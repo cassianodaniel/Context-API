@@ -1,8 +1,13 @@
 import React from "react";
 
-import { useCount } from "./../../context/Context";
+import { useCount } from "../../context/CountContext";
 
-export default function DecreaseCounter() {
+/* interface ICounter {
+  count: number;
+  setCount(value: number): void;
+} */
+
+const DecreaseCounter: React.FC = (/*ICounter*/) => {
   const { count, setCount } = useCount();
 
   return (
@@ -15,4 +20,6 @@ export default function DecreaseCounter() {
       </span>
     </div>
   );
-}
+};
+
+export default DecreaseCounter;
